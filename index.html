@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skincare Recommendation Form</h1>
+        <form id="skincare-form">
+            <div class="form-step">
+                <label for="skin-type">What is your skin type?</label>
+                <select id="skin-type" required>
+                    <option value="" disabled selected>Select your skin type</option>
+                    <option value="dry">Dry</option>
+                    <option value="oily">Oily</option>
+                    <option value="combination">Combination</option>
+                    <option value="sensitive">Sensitive</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </div>
+            <div class="form-step">
+                <label for="concern">What is your primary skincare concern?</label>
+                <select id="concern" required>
+                    <option value="" disabled selected>Select your concern</option>
+                    <option value="acne">Acne</option>
+                    <option value="aging">Aging</option>
+                    <option value="hydration">Hydration</option>
+                    <option value="dark-spots">Dark Spots</option>
+                    <option value="sensitivity">Sensitivity</option>
+                </select>
+            </div>
+            <div class="form-step">
+                <label for="preference">Do you have any product preferences?</label>
+                <input type="text" id="preference" placeholder="e.g., vegan, fragrance-free">
+            </div>
+            <button type="submit" class="btn">Get Recommendation</button>
+        </form>
+        <div id="recommendation" class="recommendation hidden">
+            <h2>Recommended Skincare Routine</h2>
+            <p id="recommendation-text"></p>
+            <button onclick="resetForm()" class="btn">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
